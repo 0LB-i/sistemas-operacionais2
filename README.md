@@ -25,9 +25,39 @@ fgrep "o q procurar" "aonde vc quer q procure" == Localizar e exibir se um item 
 
 groups "usuario" == lista os grupos que o usuário tem acesso, da esquerda é o primario
 
-### Criando usuário
+sudo vi shadow == ver senhas criptografadas 
+
+man "comando" |more == Chama o manual do comando
+
+### Criando usuário e grupo
+
+##### Comandos Simples
 
 sudo adduser "usuario" == Cria um usuário
+sudo addgroup "grupo" == Cria um grupo
+
+##### Comandos complexos (Mais profissional)
+
+sudo useradd == 
+sudo groupadd ==
+sudo useradd -m -b /home/gerentes -g "grupo" -s /bin/sh joao == cria uma pasta com o nome do usuário, coloca ele em um grupo e cria um usuário com o nome dele
+
+sudo useradd -m -b /home/gerentes -g "grupo" -s /bin/bash -p $(openssl passwd -1 "senha") "usuario" == cria uma pasta ou insere se já existir uma pasta, coloca em um grupo, cria uma senha e criptografa a senha dele e cria um usuário. Mas isso deixa rastro no log
+
+##### Deletar usuário
+sudo deluser "usuario"  == Apaga o usuário
+
+### Criando senha para usuário
+sudo passwd "usuario" == cria uma senha para o usuário
+
+sudo echo "usuario":"senha" chpasswd == muda a senha do usuário
+
+sudo passwd "usuario" == define uma senha
+sudo passwd -e "usuario" == manda trocar a senha assim q logar
+
+### Ajuda sobre um comando
+
+"Comando" --help == Mostra ajuda sobre esse comando, suas possibilidades
 
 ## SSH
 ssh gabriel@127.0.1.1 -p22 == comando para ir para dentro do servidor pelo visual studio code
