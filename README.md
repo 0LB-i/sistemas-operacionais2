@@ -29,6 +29,16 @@ sudo vi shadow == ver senhas criptografadas
 
 man "comando" |more == Chama o manual do comando
 
+ps -ef | grep gabriel | wc -l == conta a quantidade de processos em execução do usuário gabriel, não é 100$ correto a contagem, já que ele tbm conta o próprio processo 
+
+htop == um top diferenciado
+
+ntop == top para medir a rede, normalmente não está instalado 
+
+ps -aux == é quase igual ao "ps -ef", "a" é de all, "u" de users e "x" é de em execução
+
+sudo du -sh /var == verificar o espaço que o diretório/partição var ocupa, "s" mostra o total da pasta, e "S" mostra o total de cada pasta dentro desta, ele abre digamos assim
+
 ### Criando usuário e grupo
 
 ##### Comandos Simples
