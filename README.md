@@ -1,4 +1,4 @@
-# Repositório Sistea Operacionais 2
+# Repositório Sistemas Operacionais 2
 
 ## Comandos Linux:
 
@@ -7,6 +7,7 @@ sudo apt update == atualiza o sistema interno, com as modificações e etc
 sudo apt install openssh == instala o openssh
 sudo apt-get ipdate == para atualizar os pacote baixados
 
+touch "nome do arquivo e extensão do mesmo" == usado normalmente para criar arquivos vazios
 
 sudo dpkg-reconfigure tzdata == instala o tzdata para configurar o horário do servidor
 
@@ -90,6 +91,9 @@ git remote add origin https://link
 git branch -M main
 git push -u origin main
 
+sudo apt install tree == instala o tree
+
+tree -P *."extensão" == mostra uma lista em formato de ramificação das pastas com os arquivos que eu estou procurando
 
 
 
