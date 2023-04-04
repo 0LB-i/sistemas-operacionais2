@@ -73,6 +73,8 @@ sudo passwd -e "usuario" == manda trocar a senha assim q logar
 ## SSH
 ssh gabriel@127.0.1.1 -p22 == comando para ir para dentro do servidor pelo visual studio code
 
+porta padrão do ssh é 22 ou 23
+
 ## GIT
 
 #### create a new repository on the command line
@@ -96,6 +98,20 @@ sudo apt install tree == instala o tree
 tree -P *."extensão" == mostra uma lista em formato de ramificação das pastas com os arquivos que eu estou procurando
 
 
+## Baixar o APACHE
+
+sudo apt install apache2 == instala o apache
+
+sudo service apache2 status == verifica o status do apache
+
+porta padrão do apache é 80
+
+## portas tcp/ip    
+
+sudo ufw allow 8085/tcp == libera a porta
+sudo ufw dany 8085/tcp == bloqueia a porta
+
+sudo ufw app list == lista de ufw liberadas
 
 
 
