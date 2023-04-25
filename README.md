@@ -113,5 +113,24 @@ sudo ufw dany 8085/tcp == bloqueia a porta
 
 sudo ufw app list == lista de ufw liberadas
 
+## Docker
 
+sudo apt-get remove docker == remove vestigios de docker pelo sistema
+sudo apt install curl == instala o curl
+mkdir docker == cria uma pasta chamada docker
+cd docker/ == entra na pasta docker criada
+curl -fsSL https://get.docker.com -o get-docker.sh == para instalar o docker
+sh get-docker.sh
+sudo docker run -it ubuntu:20.04 /bin/bash == baixa e rodo o docker do ubuntu e o (-it) faz eu entrar no container
+sudo docker images == imagens que você têm no sistema
+sudo docker container ps == lista os contâiners em execução 
+sudo docker container ps -a == lista todos os contâiners 
+sudo docker rm (container id) == para matar o contâiner 
+sudo docker rm $(docker ps -qa) == mata todos os containers inativos
+sudo docker rm $(docker ps -qa) -f == mata todos os containers
 
+### Comando paa rodar o NGINX na porta 8081 do nosso PC windows
+sudo docker run --name mynginx2 -p 8081:80 -d nginx
+sudo docker run -i -t --volumes-from mynginx4 --name mynginx4_files debian /bin/bash
+
+sudo docker run -it -v/var/www/html/:/usr/share/nginx/html -p 8081:80 nginx
